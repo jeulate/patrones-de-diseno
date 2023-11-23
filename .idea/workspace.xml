@@ -4,26 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bac1bf9-0025-42ff-92e6-dcf1daedd7fd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/composite/Component.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/composite/Composite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/composite/CompositeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/composite/Leaf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/composite/example/directories/Directory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/composite/example/directories/File.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/composite/example/index.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/composite/example/menu/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/composite/example/menu/MenuComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/composite/example/menu/MenuComposite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/composite/example/menu/MenuItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/composite/example/menu/MenuTestDrive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/untitled.iml" afterDir="false" />
+    <list default="true" id="4bac1bf9-0025-42ff-92e6-dcf1daedd7fd" name="Changes" comment="Ejemplo de menu y directorio de Patron Composite">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractfactory/AbstractFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractfactory/AbstractProductA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractfactory/AbstractProductB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractfactory/ConcreteFactoryOne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractfactory/ConcreteFactoryTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractfactory/ProductAOne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractfactory/ProductATwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractfactory/ProductBOne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractfactory/ProductBTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractfactory/examples/index.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractfactory/examples/kingdom/KingdomTestDrive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/proyarqsw/AdaptadorEnchufeDosPines.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/proyarqsw/EnchufeDosPines.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/proyarqsw/EnchufeTresPines.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/proyarqsw/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/proyarqsw/composite/DispositivoModernoComposite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/proyarqsw/composite/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/proyarqsw/decorator/EnchufeConInterruptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/proyarqsw/decorator/EnchufeDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/proyarqsw/decorator/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/patrones de diseno.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +38,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -46,18 +52,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -67,11 +74,24 @@
       <option name="presentableId" value="Default" />
       <updated>1700358306669</updated>
       <workItem from="1700358307683" duration="3288000" />
-      <workItem from="1700480001793" duration="1219000" />
+      <workItem from="1700480001793" duration="2734000" />
+      <workItem from="1700764381019" duration="7487000" />
     </task>
+    <task id="LOCAL-00001" summary="Ejemplo de menu y directorio de Patron Composite">
+      <created>1700481467678</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700481467678</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Ejemplo de menu y directorio de Patron Composite" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ejemplo de menu y directorio de Patron Composite" />
   </component>
 </project>
