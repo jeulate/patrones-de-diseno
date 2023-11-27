@@ -4,31 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bac1bf9-0025-42ff-92e6-dcf1daedd7fd" name="Changes" comment="Ejemplo de menu y directorio de Patron Composite">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/abstractfactory/AbstractFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/abstractfactory/AbstractProductA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/abstractfactory/AbstractProductB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/abstractfactory/ConcreteFactoryOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/abstractfactory/ConcreteFactoryTwo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/abstractfactory/ProductAOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/abstractfactory/ProductATwo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/abstractfactory/ProductBOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/abstractfactory/ProductBTwo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/abstractfactory/examples/index.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/abstractfactory/examples/kingdom/KingdomTestDrive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/proyarqsw/AdaptadorEnchufeDosPines.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/proyarqsw/EnchufeDosPines.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/proyarqsw/EnchufeTresPines.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/proyarqsw/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/proyarqsw/composite/DispositivoModernoComposite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/proyarqsw/composite/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/proyarqsw/decorator/EnchufeConInterruptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/proyarqsw/decorator/EnchufeDecorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/proyarqsw/decorator/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="4bac1bf9-0025-42ff-92e6-dcf1daedd7fd" name="Changes" comment="Completando algunos ejemplos de patrones y se añade&#10;el ejemplo de enchufes con los patrones adaptador, composite y decorator">
+      <change afterPath="$PROJECT_DIR$/src/ASReservaVuelos/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ASReservaVuelos/Presentacion.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ASReservaVuelos/Presentacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ASReservaVuelos/icons/icons8-boleto-64.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ASReservaVuelos/icons/icons8-dinero-64.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ASReservaVuelos/icons/icons8-reserva-50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ASReservaVuelos/pDecorator/ReservaBasica.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ASReservaVuelos/pDecorator/ReservaConAsientoPreferencial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ASReservaVuelos/pDecorator/ReservaConComidaEspecial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ASReservaVuelos/pDecorator/ReservaDeVuelo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ASReservaVuelos/pFactoryMethod/Vuelo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ASReservaVuelos/pFactoryMethod/VueloEconomico.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ASReservaVuelos/pFactoryMethod/VueloEjecutivo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ASReservaVuelos/pStrategy/Tarifa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ASReservaVuelos/pStrategy/TarifaEconomica.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ASReservaVuelos/pStrategy/TarifaEjecutiva.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/patrones de diseno.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,13 +51,40 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/UAGRM/ARQUITECTURA DE SW 2023/2do parcial/cstudioTienda/untitled/src/ASReservaVuelos/icons",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\UAGRM\ARQUITECTURA DE SW 2023\2do parcial\cstudioTienda\untitled\src\ASReservaVuelos\icons" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Presentacion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ASReservaVuelos.Presentacion" />
+      <module name="patrones de diseno" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ASReservaVuelos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Presentacion" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -75,7 +95,8 @@
       <updated>1700358306669</updated>
       <workItem from="1700358307683" duration="3288000" />
       <workItem from="1700480001793" duration="2734000" />
-      <workItem from="1700764381019" duration="7487000" />
+      <workItem from="1700764381019" duration="11142000" />
+      <workItem from="1701047720558" duration="6403000" />
     </task>
     <task id="LOCAL-00001" summary="Ejemplo de menu y directorio de Patron Composite">
       <created>1700481467678</created>
@@ -84,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700481467678</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Completando algunos ejemplos de patrones y se añade&#10;el ejemplo de enchufes con los patrones adaptador, composite y decorator">
+      <created>1700773681545</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700773681576</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,6 +120,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Ejemplo de menu y directorio de Patron Composite" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ejemplo de menu y directorio de Patron Composite" />
+    <MESSAGE value="Completando algunos ejemplos de patrones y se añade&#10;el ejemplo de enchufes con los patrones adaptador, composite y decorator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completando algunos ejemplos de patrones y se añade&#10;el ejemplo de enchufes con los patrones adaptador, composite y decorator" />
   </component>
 </project>
