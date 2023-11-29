@@ -1,12 +1,8 @@
 package ASReservaVuelos;
 
-import ASReservaVuelos.pDecorator.ReservaBasica;
-import ASReservaVuelos.pDecorator.ReservaConAsientoPreferencial;
-import ASReservaVuelos.pDecorator.ReservaConComidaEspecial;
-import ASReservaVuelos.pDecorator.ReservaDeVuelo;
-import ASReservaVuelos.pStrategy.Tarifa;
+import ASReservaVuelos.pStrategy.ITarifaBase;
 import ASReservaVuelos.pStrategy.TarifaEconomica;
-import ASReservaVuelos.pStrategy.TarifaEjecutiva;
+import ASReservaVuelos.pStrategy.TarifaBolvianos;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,7 +14,7 @@ public class Main {
         reserva = new ReservaConAsientoPreferencial(reserva);
 
         //Realizar la reserva con la tarifa economica
-        Tarifa tarifa = new TarifaEjecutiva();
+        ITarifaBase tarifa = new TarifaBolvianos();
         double precio = tarifa.calcularPrecio();
 
         System.out.println("Resumen de la Reserva:");

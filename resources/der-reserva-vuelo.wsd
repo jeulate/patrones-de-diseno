@@ -1,0 +1,231 @@
+@startuml "Reserva de vuelos - Juancho"
+title "Reserva de vuelos - Juancho"
+
+package "Strategy Pattern" <<Rectangle>> {
+    class "Calculadora Tarifa" as calculator {
+        -ITarifaBase tarifa
+        --
+        +setStrategy(ITarifaBase)
+        +calcularTarifaVuelo(double monto)
+    }
+
+    note top of calculator 
+        public double calcularTarifaVuelo(double monto){
+            ITarifaBase.calcularMontoTarifa(monto)
+        }
+    end note
+
+    enum "ETarifa" as eTarifa{
+        DOLLARS,
+        BOLIVIANOS,
+        PESOS_ARGENTINOS
+    }
+
+    interface "ITarifaBase" as baseStrategy {
+        --
+        +calcularMontoTarifa(double monto): double
+    }
+
+    note right of baseStrategy
+        La tarifa debe ser calculada 
+        según la siguiente forma:
+
+        Total = monto * factorConversion + impuestos
+    end note
+
+    class "TarifaDolares" as dollarsStrategy {
+        --
+        +calcularMontoTarifa(double monto): double
+    }
+
+    class "TarifaBolivianos" as bolivianosStrategy{
+        --
+        +calcularMontoTarifa(double monto): double
+    }
+
+    class "TarifaPesosArgentinos" as argentinosStrategy{
+        --
+        +calcularMontoTarifa(double monto): double
+        -calcularCargoMonth():double
+    }
+
+    calculator o-- baseStrategy 
+
+    dollarsStrategy -|> baseStrategy
+    baseStrategy <|-- bolivianosStrategy
+    baseStrategy <|-- argentinosStrategy
+}
+
+package "Factory Pattern" <<Rectangle>>{
+    interface "IDestinoVuelo" as destinoVuelo {
+        
+        --
+        calcularCargosVuelo(int adultPassanger, int kidsPassanger, date departureDate, \n                                  date returnDate, CityOrigin cityOrigin)
+    }
+
+    note right of destinoVuelo
+        El precio de los pasajeros adultos y niños 
+        es distinto para cada uno de los destinos
+
+        El total de cargo del vuelo debe ser calculado:
+
+        TOTAL = base + (qAdults * precioAdult) + (qKids * precioKids) + (cargoMonth) + (qDays * precioDay)
+    end note
+
+    class "VueloLaPaz" as vueloLaPaz{
+        - ECity _cityOrigin
+        - int _adultPassanger
+        - int _kidsPassanger
+        - date _departureDate
+        - date _returnDate
+
+        - double _base
+        - double _precioAdults
+        - double _precioKids
+        - double _cargoMonth
+        - double _precioDay
+        --
+        + VueloLaPaz(ECity cityOrigin, int adultPassanger, \n                     int kidsPassanger, date departureDate, date returnDate)
+        + setBase(double)
+        + setPrecioAdults(double)
+        + setPrecioKids(double)
+        + setCargoMonth(double)
+        + setPrecioDay(double)
+        + double calcularCargosVuelo()
+    }
+    class "VueloCochabamba" as vueloCocha{
+        - ECity _cityOrigin
+        - int _adultPassanger
+        - int _kidsPassanger
+        - date _departureDate
+        - date _returnDate
+
+        - double _base
+        - double _precioAdults
+        - double _precioKids
+        - double _cargoMonth
+        - double _precioDay
+        --
+        + VueloCochabamba(ECity cityOrigin, int adultPassanger, \n                     int kidsPassanger, date departureDate, date returnDate)
+        + setBase(double)
+        + setPrecioAdults(double)
+        + setPrecioKids(double)
+        + setCargoMonth(double)
+        + setPrecioDay(double)
+        + double calcularCargosVuelo()
+    }
+    class "VueloTarija" as vueloTarija{
+        - ECity _cityOrigin
+        - int _adultPassanger
+        - int _kidsPassanger
+        - date _departureDate
+        - date _returnDate
+
+        - double _base
+        - double _precioAdults
+        - double _precioKids
+        - double _cargoMonth
+        - double _precioDay
+        --
+        + VueloTarija(ECity cityOrigin, int adultPassanger, \n                     int kidsPassanger, date departureDate, date returnDate)
+        + setBase(double)
+        + setPrecioAdults(double)
+        + setPrecioKids(double)
+        + setCargoMonth(double)
+        + setPrecioDay(double)
+        + double calcularCargosVuelo()
+    }
+    enum "ECity" as eCity{
+        LA_PAZ,
+        COCHA,
+        TARIJA
+    }
+
+    class "Creator" as creator{
+        - **IDestinoVuelo** _vuelo
+        - CalculadoraTarifa _calculadora
+        
+        --
+        - IDestinoVuelo **CrearDestino**(CityFinal cityFinal)
+        - IDestinoVuelo **CrearVuelo**(ECity cityOrigin, int adultPassanger, \n                     int kidsPassanger, date departureDate, date returnDate)
+        + CalcularTotalVuelo()
+        + Creator(ETarifa strategyTarifa, ECity cityOrigin, ECity cityFinal, int adultPassanger, \n           int kidsPassanger, date departureDate, date returnDate)
+        - createStrategy()
+    }
+
+    note top of creator
+        public Creator(ECity cityFinal){
+            _calculadora.setStrategy(createStrategy(eTarifa));
+        }
+        
+
+        double CalcularTotalVuelo(){
+            vuelo = this.crearVuelo(cityFinal);
+            double monto = vuelo.calcularCargosVuelo();
+            double total = _calculadora.CalcularTarifaVuelo(monto);
+        }
+
+        private IDestinoVuelo CrearDestino(cityFinal) {
+            switch(cityFinal){
+                case LA_PAZ: return new CreatorVueloLapaz().crearVuelo(...);
+                case COCHA: return new CreatorVueloCochabamba().crearVuelo(...);
+                case TARIJA: return new CreatorVueloTarija().crearVuelo(...);
+            }
+        }
+
+        createStrategy(){
+             switch(_strategy){
+                case DOLLARS: return new TarifaDolares();
+                case BOLIVIANOS: return new TarifaBolivianos();
+                case PESOS_ARGENTINOS: return new TarifaPesosArgentinos();
+            }
+        }
+    end note
+
+    class "CreatorVueloLapaz" as creatorLaPaz{
+        - double _base
+        - double _precioAdults
+        - double _precioKids
+        - double _cargoMonth
+        - double _precioDay
+        --
+        + IDestinoVuelo CrearVuelo(ECity cityOrigin, int adultPassanger, \n                     int kidsPassanger, date departureDate, date returnDate)
+    }
+
+    class "CreatorVueloCochabamba" as creatorCocha{
+        - double _base
+        - double _precioAdults
+        - double _precioKids
+        - double _cargoMonth
+        - double _precioDay
+        --
+        + IDestinoVuelo CrearVuelo(ECity cityOrigin, int adultPassanger, \n                     int kidsPassanger, date departureDate, date returnDate)
+    }
+
+    class "CreatorVueloTarija" as creatorTarija{
+        - double _base
+        - double _precioAdults
+        - double _precioKids
+        - double _cargoMonth
+        - double _precioDay
+        --
+        + IDestinoVuelo CrearVuelo(ECity cityOrigin, int adultPassanger, \n                     int kidsPassanger, date departureDate, date returnDate)
+    }
+
+    vueloLaPaz --|> destinoVuelo
+    vueloCocha --|> destinoVuelo
+    vueloTarija --|> destinoVuelo
+
+    creator <|-- creatorLaPaz
+    creator <|-- creatorCocha
+    creator <|-- creatorTarija
+
+    creator .> destinoVuelo
+    creator .> eCity
+    creator .> eTarifa
+    baseStrategy <. creator
+    creator -> calculator
+
+}
+
+@enduml

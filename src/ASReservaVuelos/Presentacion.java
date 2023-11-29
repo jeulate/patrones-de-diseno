@@ -1,13 +1,12 @@
 package ASReservaVuelos;
 
 import ASReservaVuelos.pDecorator.*;
-import ASReservaVuelos.pStrategy.Tarifa;
-import ASReservaVuelos.pStrategy.TarifaEjecutiva;
+import ASReservaVuelos.pStrategy.ITarifaBase;
+import ASReservaVuelos.pStrategy.TarifaBolvianos;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.PrintWriter;
 
 public class Presentacion {
     private JButton nuevaReservaButton;
@@ -39,7 +38,7 @@ public class Presentacion {
         agregarTarifaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Tarifa tarifaejecutiva = new TarifaEjecutiva();
+                ITarifaBase tarifaejecutiva = new TarifaBolvianos();
                 ((ReservaBasica) reserva).setTarifa(tarifaejecutiva);
                 reserva.reservaVuelo();
                 
