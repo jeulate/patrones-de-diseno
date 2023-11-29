@@ -22,6 +22,7 @@ public class Creator {
                     .CrearVuelo(_cityOrigin, _adultPassanger, _kidsPassanger, _departureDate, _returnDate);
             case TARIJA -> new CreatorVueloTarija()
                     .CrearVuelo(_cityOrigin, _adultPassanger, _kidsPassanger, _departureDate, _returnDate);
+            default -> throw new IllegalStateException("Unexpected value: " + _cityFinal);
         };
     }
 
