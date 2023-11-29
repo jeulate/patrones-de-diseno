@@ -3,6 +3,8 @@ package ASReservaVuelos;
 import com.toedter.calendar.JDateChooser;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class FReservaVuelo {
     private JCheckBox reservaComidaEspecialCheckBox;
@@ -29,22 +31,22 @@ public class FReservaVuelo {
         fechaVueltaChosser =  new JDateChooser();
         fechaIdaPanel.add(fechaIdaChosser);
         fechaVueltaPanel.add(fechaVueltaChosser);
-//        paintCiudades(origenComboBox, null, null);
-//        paintCiudades(destinoComboBox, null, null);
+        paintCiudades(origenComboBox, null, null);
+        paintCiudades(destinoComboBox, null, null);
 
-//        paintMonedas();
-//        origenComboBox.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                changeCombo(origenComboBox, destinoComboBox);
-//            }
-//        });
-//        destinoComboBox.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                changeCombo(destinoComboBox, origenComboBox);
-//            }
-//        });
+        paintMonedas();
+        origenComboBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                changeCombo(origenComboBox, destinoComboBox);
+            }
+        });
+        destinoComboBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                changeCombo(destinoComboBox, origenComboBox);
+            }
+        });
     }
 
     private void changeCombo(JComboBox jComboBoxChange, JComboBox jComboBoxRepaint) {
