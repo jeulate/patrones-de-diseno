@@ -14,10 +14,8 @@ public abstract class Creator {
     private Date _departureDate;
     private Date _returnDate;
 
-    protected abstract IDestinoVuelo CrearVuelo(ECity cityOrigin, int adultPassanger, int kidsPassanger, Date departureDate, Date returnDate);
-
-    private IDestinoVuelo CrearDestino(ECity cityFinal) {
-        return switch (cityFinal) {
+    protected IDestinoVuelo CrearVuelo(ECity cityOrigin, int adultPassanger, int kidsPassanger, Date departureDate, Date returnDate) {
+        return switch (_cityFinal) {
             case LA_PAZ -> new CreatorVueloLapaz()
                     .CrearVuelo(_cityOrigin, _adultPassanger, _kidsPassanger, _departureDate, _returnDate);
             case COCHABAMBA -> new CreatorVueloCochabamba()
@@ -28,7 +26,7 @@ public abstract class Creator {
     }
 
     public double CalcularTotalVuelo(){
-        IDestinoVuelo vuelo = this.CrearDestino(_cityFinal);
+        IDestinoVuelo vuelo = this.CrearVuelo(_cityOrigin, _adultPassanger,_kidsPassanger,_departureDate,_returnDate);
         double monto = vuelo.calcularCargosVuelo();
         double total = _calculadora.calcularTarifaVuelo(monto);
 
