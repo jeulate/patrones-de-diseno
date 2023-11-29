@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bac1bf9-0025-42ff-92e6-dcf1daedd7fd" name="Changes" comment="Ejemplo de Reserva de vuelo">
-      <change afterPath="$PROJECT_DIR$/src/ASReservaVuelos/pDecorator/ReservaVueloEconomico.java" afterDir="false" />
+    <list default="true" id="4bac1bf9-0025-42ff-92e6-dcf1daedd7fd" name="Changes" comment="Formulario Reserva de vuelo">
+      <change afterPath="$PROJECT_DIR$/src/jcalendar-1.4.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ASReservaVuelos/Presentacion.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ASReservaVuelos/Presentacion.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ASReservaVuelos/Presentacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ASReservaVuelos/Presentacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ASReservaVuelos/pDecorator/ReservaBasica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ASReservaVuelos/pDecorator/ReservaBasica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ASReservaVuelos/pDecorator/ReservaConComidaEspecial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ASReservaVuelos/pDecorator/ReservaConComidaEspecial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patrones de diseno.iml" beforeDir="false" afterPath="$PROJECT_DIR$/patrones de diseno.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ASReservaVuelos/FReservaVuelo.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ASReservaVuelos/FReservaVuelo.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ASReservaVuelos/FReservaVuelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ASReservaVuelos/FReservaVuelo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proyarqsw/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proyarqsw/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proyarqsw/composite/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proyarqsw/composite/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proyarqsw/decorator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proyarqsw/decorator/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +31,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "varcog"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="1710e043-bb48-4457-a7a4-bc42179c3005" />
+        <option name="url" value="https://github.com/jeulate/patrones-de-diseno.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
   <component name="ProjectId" id="2YNFoLRO921CF2Dr9ejmWoby47E" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -41,21 +61,52 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "195",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/UAGRM/SISTEMAS DISTRIBUIDOS 2023/Final Sockettcp/tcpSocketServer",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Dayana/Documents/Projectos/patrones-de-diseno/src/jcalendar-1.4.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Dayana\Documents\Projectos\patrones-de-diseno\src" />
       <recent name="D:\UAGRM\ARQUITECTURA DE SW 2023\2do parcial\cstudioTienda\untitled\src\ASReservaVuelos\icons" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.FReservaVuelo">
+    <configuration name="FReservaVuelo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ASReservaVuelos.FReservaVuelo" />
+      <module name="patrones de diseno" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ASReservaVuelos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ASReservaVuelos.Main" />
+      <module name="patrones de diseno" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ASReservaVuelos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Presentacion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ASReservaVuelos.Presentacion" />
       <module name="patrones de diseno" />
@@ -71,6 +122,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FReservaVuelo" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Presentacion" />
       </list>
     </recent_temporary>
@@ -90,6 +143,7 @@
       <workItem from="1701083446342" duration="7483000" />
       <workItem from="1701113936496" duration="1783000" />
       <workItem from="1701142054929" duration="5236000" />
+      <workItem from="1701208036588" duration="10884000" />
     </task>
     <task id="LOCAL-00001" summary="Ejemplo de menu y directorio de Patron Composite">
       <created>1700481467678</created>
@@ -112,16 +166,36 @@
       <option name="project" value="LOCAL" />
       <updated>1701054632207</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Formulario Reserva de vuelo">
+      <option name="closed" value="true" />
+      <created>1701235182362</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701235182362</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Ejemplo de menu y directorio de Patron Composite" />
     <MESSAGE value="Completando algunos ejemplos de patrones y se añade&#10;el ejemplo de enchufes con los patrones adaptador, composite y decorator" />
     <MESSAGE value="Ejemplo de Reserva de vuelo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ejemplo de Reserva de vuelo" />
+    <MESSAGE value="Formulario Reserva de vuelo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Formulario Reserva de vuelo" />
   </component>
 </project>

@@ -1,10 +1,10 @@
 package ASReservaVuelos;
 
+import com.toedter.calendar.JDateChooser;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
 
 public class FReservaVuelo {
     private JCheckBox reservaComidaEspecialCheckBox;
@@ -15,8 +15,22 @@ public class FReservaVuelo {
     private JComboBox origenComboBox;
     private JComboBox destinoComboBox;
     private JLabel totalLabel;
+    private JTextField adultoTextField;
+    private JTextField ninoTextField;
+    private JTextField bebeTextField;
+    private JRadioButton idaYVueltaRadioButton;
+    private JRadioButton soloIdaRadioButton;
+    private JPanel fechaIdaPanel;
+    private JPanel fechaVueltaPanel;
+
+    private JDateChooser fechaIdaChosser;
+    private JDateChooser fechaVueltaChosser;
 
     public FReservaVuelo() {
+        fechaIdaChosser =  new JDateChooser();
+        fechaVueltaChosser =  new JDateChooser();
+        fechaIdaPanel.add(fechaIdaChosser);
+        fechaVueltaPanel.add(fechaVueltaChosser);
         paintCiudades(origenComboBox, null, null);
         paintCiudades(destinoComboBox, null, null);
 
