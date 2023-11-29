@@ -4,7 +4,7 @@ import ASReservaVuelos.pStrategy.*;
 
 import java.util.Date;
 
-public abstract class Creator {
+public class Creator {
     private CalculadoraTarifa _calculadora;
 
     private ECity _cityOrigin;
