@@ -5,20 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4bac1bf9-0025-42ff-92e6-dcf1daedd7fd" name="Changes" comment="Formulario Reserva de vuelo">
-      <change afterPath="$PROJECT_DIR$/src/jcalendar-1.4.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patrones de diseno.iml" beforeDir="false" afterPath="$PROJECT_DIR$/patrones de diseno.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ASReservaVuelos/FReservaVuelo.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ASReservaVuelos/FReservaVuelo.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ASReservaVuelos/FReservaVuelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ASReservaVuelos/FReservaVuelo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proyarqsw/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proyarqsw/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proyarqsw/composite/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proyarqsw/composite/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proyarqsw/decorator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proyarqsw/decorator/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/der-reserva-vuelo.wsd" beforeDir="false" afterPath="$PROJECT_DIR$/resources/der-reserva-vuelo.wsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/der-reserva-vuelo/Reserva de vuelos - Juancho.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/der-reserva-vuelo/Reserva de vuelos - Juancho.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ASReservaVuelos/pFactoryMethod/Creator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ASReservaVuelos/pFactoryMethod/Creator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="module" />
+    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -31,12 +32,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "varcog"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;varcog&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -45,35 +46,37 @@
       </UrlAndAccount>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2YNFoLRO921CF2Dr9ejmWoby47E" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "195",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Dayana/Documents/Projectos/patrones-de-diseno/src/jcalendar-1.4.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;195&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Dayana/Documents/Projectos/patrones-de-diseno/src/jcalendar-1.4.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Dayana\Documents\Projectos\patrones-de-diseno\src" />

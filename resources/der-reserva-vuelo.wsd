@@ -2,8 +2,8 @@
 title "Reserva de vuelos - Juancho"
 
 package "Strategy Pattern" <<Rectangle>> {
-    class "Calculadora Tarifa" as calculator {
-        -ITarifaBase tarifa
+    class "CalculadoraTarifa" as calculator {
+        -ITarifaBase _tarifa
         --
         +setStrategy(ITarifaBase)
         +calcularTarifaVuelo(double monto)
@@ -33,7 +33,7 @@ package "Strategy Pattern" <<Rectangle>> {
         Total = monto * factorConversion + impuestos
     end note
 
-    class "TarifaDolares" as dollarsStrategy {
+    class "TarifaDollars" as dollarsStrategy {
         --
         +calcularMontoTarifa(double monto): double
     }
@@ -60,7 +60,7 @@ package "Factory Pattern" <<Rectangle>>{
     interface "IDestinoVuelo" as destinoVuelo {
         
         --
-        calcularCargosVuelo(int adultPassanger, int kidsPassanger, date departureDate, \n                                  date returnDate, CityOrigin cityOrigin)
+        double calcularCargosVuelo(int adultPassanger, int kidsPassanger, date departureDate, \n                                  date returnDate, CityOrigin cityOrigin)
     }
 
     note right of destinoVuelo
@@ -137,7 +137,7 @@ package "Factory Pattern" <<Rectangle>>{
     }
     enum "ECity" as eCity{
         LA_PAZ,
-        COCHA,
+        COCHABAMBA,
         TARIJA
     }
 
@@ -154,13 +154,13 @@ package "Factory Pattern" <<Rectangle>>{
     }
 
     note top of creator
-        public Creator(ECity cityFinal){
-            _calculadora.setStrategy(createStrategy(eTarifa));
+        public Creator(ECity cityFinal, ETarifa strategy){
+            _calculadora.setStrategy(createStrategy(strategy));
         }
         
 
         double CalcularTotalVuelo(){
-            vuelo = this.crearVuelo(cityFinal);
+            vuelo = this.CrearDestino(cityFinal);
             double monto = vuelo.calcularCargosVuelo();
             double total = _calculadora.CalcularTarifaVuelo(monto);
         }
@@ -168,13 +168,13 @@ package "Factory Pattern" <<Rectangle>>{
         private IDestinoVuelo CrearDestino(cityFinal) {
             switch(cityFinal){
                 case LA_PAZ: return new CreatorVueloLapaz().crearVuelo(...);
-                case COCHA: return new CreatorVueloCochabamba().crearVuelo(...);
+                case COCHABAMBA: return new CreatorVueloCochabamba().crearVuelo(...);
                 case TARIJA: return new CreatorVueloTarija().crearVuelo(...);
             }
         }
 
         createStrategy(){
-             switch(_strategy){
+             switch(strategy){
                 case DOLLARS: return new TarifaDolares();
                 case BOLIVIANOS: return new TarifaBolivianos();
                 case PESOS_ARGENTINOS: return new TarifaPesosArgentinos();

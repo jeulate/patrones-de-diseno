@@ -5,10 +5,10 @@ import ASReservaVuelos.pStrategy.*;
 import java.util.Date;
 
 public abstract class Creator {
-    private IDestinoVuelo _vuelo;
     private CalculadoraTarifa _calculadora;
 
     private ECity _cityOrigin;
+    private ECity _cityFinal;
     private int _adultPassanger;
     private int _kidsPassanger;
     private Date _departureDate;
@@ -27,8 +27,8 @@ public abstract class Creator {
         };
     }
 
-    public double CalcularTotalVuelo(ECity cityFinal){
-        IDestinoVuelo vuelo = this.CrearDestino(cityFinal);
+    public double CalcularTotalVuelo(){
+        IDestinoVuelo vuelo = this.CrearDestino(_cityFinal);
         double monto = vuelo.calcularCargosVuelo();
         double total = _calculadora.calcularTarifaVuelo(monto);
 
@@ -40,12 +40,11 @@ public abstract class Creator {
         _calculadora.setStrategy(createStrategy(strategyTarifa));
 
         _cityOrigin = cityOrigin;
+        _cityFinal = cityFinal;
         _adultPassanger = adultPassanger;
         _kidsPassanger = kidsPassanger;
         _departureDate = departureDate;
         _returnDate =returnDate;
-
-        _vuelo = CrearDestino(cityFinal);
     }
     private ITarifaBase createStrategy(ETarifa  strategy){
         return switch (strategy) {
