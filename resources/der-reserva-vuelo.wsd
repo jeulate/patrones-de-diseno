@@ -154,7 +154,9 @@ package "Factory Pattern" <<Rectangle>>{
     }
 
     note top of creator
-        public Creator(ECity cityFinal, ETarifa strategy){
+        public setParameter(ETarifa strategyTarifa, ECity cityOrigin, 
+                                    ECity cityFinal, int adultPassanger, int kidsPassanger, 
+                                    Date departureDate, Date returnDate){
             _calculadora.setStrategy(createStrategy(strategy));
         }
         
