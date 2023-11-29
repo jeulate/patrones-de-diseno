@@ -3,16 +3,16 @@
   <grid id="27dc6" binding="jPanelPrincipal" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="10" left="10" bottom="10" right="10"/>
     <constraints>
-      <xy x="20" y="20" width="594" height="534"/>
+      <xy x="20" y="20" width="594" height="629"/>
     </constraints>
     <properties>
-      <preferredSize width="500" height="400"/>
+      <preferredSize width="500" height="500"/>
     </properties>
     <border type="none">
       <color color="-10282213"/>
     </border>
     <children>
-      <grid id="48746" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="48746" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="10" left="10" bottom="10" right="10"/>
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -31,11 +31,6 @@
               <text value="Tipos de Vuelo"/>
             </properties>
           </component>
-          <vspacer id="4595e">
-            <constraints>
-              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-            </constraints>
-          </vspacer>
           <grid id="2e336" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="10" left="30" bottom="10" right="30"/>
             <constraints>
@@ -220,7 +215,9 @@
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <visible value="false"/>
+                </properties>
                 <border type="bevel-raised"/>
                 <children>
                   <component id="e6889" class="javax.swing.JLabel">
@@ -327,6 +324,46 @@
           <component id="42a63" class="javax.swing.JSeparator">
             <constraints>
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+          </component>
+          <grid id="768c7" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="10" left="10" bottom="10" right="10"/>
+            <constraints>
+              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="bevel-raised"/>
+            <children>
+              <component id="ec2d4" class="javax.swing.JCheckBox" binding="enviarEmailCheckBox" default-binding="true">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="enviar Email"/>
+                </properties>
+              </component>
+              <component id="9e5ff" class="javax.swing.JCheckBox" binding="enviarSMSCheckBox" default-binding="true">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Enviar SMS"/>
+                </properties>
+              </component>
+              <component id="f0d3e" class="javax.swing.JButton" binding="reservarButton" default-binding="true">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Reservar"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <component id="a0acc" class="javax.swing.JSeparator">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties/>
           </component>

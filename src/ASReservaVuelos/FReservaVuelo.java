@@ -1,9 +1,8 @@
 package ASReservaVuelos;
 
+import ASReservaVuelos.pDecorator.ConfigurationNotifier;
 import ASReservaVuelos.pFactoryMethod.Creator;
-import ASReservaVuelos.pFactoryMethod.CreatorVueloCochabamba;
 import ASReservaVuelos.pFactoryMethod.ECity;
-import ASReservaVuelos.pFactoryMethod.IDestinoVuelo;
 import ASReservaVuelos.pStrategy.ETarifa;
 import com.toedter.calendar.JDateChooser;
 
@@ -16,6 +15,7 @@ import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
@@ -35,6 +35,9 @@ public class FReservaVuelo {
     private JRadioButton soloIdaRadioButton;
     private JPanel fechaIdaPanel;
     private JPanel fechaVueltaPanel;
+    private JCheckBox enviarEmailCheckBox;
+    private JCheckBox enviarSMSCheckBox;
+    private JButton reservarButton;
 
     private JDateChooser fechaIdaChosser;
     private JDateChooser fechaVueltaChosser;
@@ -43,17 +46,17 @@ public class FReservaVuelo {
 
 
     private Creator creator;
+    private ConfigurationNotifier notifier;
 
     public FReservaVuelo() {
-
         creator =  new Creator();
-
         fechaIdaChosser =  new JDateChooser(new Date());
         fechaVueltaChosser =  new JDateChooser(new Date());
         fechaIdaPanel.add(fechaIdaChosser);
         fechaVueltaPanel.add(fechaVueltaChosser);
         adultoTextField.setText("1");
         ninoTextField.setText("0");
+        reservarButton.setEnabled(false);
         origenComboBox.addItem(origenDefault);
         //paintCiudades(origenComboBox, null, null);
         paintCiudades(destinoComboBox, null, origenDefault);
@@ -111,6 +114,12 @@ public class FReservaVuelo {
                 }
             }
         });
+        reservarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                reservar();
+            }
+        });
     }
 
     private void changeCombo(JComboBox jComboBoxChange, JComboBox jComboBoxRepaint) {
@@ -140,6 +149,7 @@ public class FReservaVuelo {
 
     private void calcularTotal() {
         totalLabel.setText("$us. XXX.XX");
+        reservarButton.setEnabled(false);
         String monedaSeleccionada = (String) monedaComboBox.getSelectedItem();
         ETarifa strategyTarifa =  getETarifa(monedaSeleccionada);
         if(strategyTarifa == null) {
@@ -196,8 +206,8 @@ public class FReservaVuelo {
         decimalFormat.applyPattern("#,###.00");
         String totalVueloFormat = getSimboloMoneda(monedaSeleccionada)  + " " + decimalFormat.format(totalVuelo);
         totalLabel.setText(totalVueloFormat);
+        reservarButton.setEnabled(true);
     }
-
 
     // Monedas ---------------------------------
     static final String[] monedas = {"Dolares", "Bolivianos", "Pesos"};
@@ -244,6 +254,28 @@ public class FReservaVuelo {
             default:
                 return null;
         }
+    }
+
+    public String getDatosReserva() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        String reserva = "************ Reserva de Vuelo ************\n";
+        reserva += "Ciudad Origen: " + origenComboBox.getSelectedItem() + "\n";
+        reserva += "Ciudad Destino: " + destinoComboBox.getSelectedItem() + "\n";
+        reserva += "Fecha Salida: " + dateFormat.format(fechaIdaChosser.getDate()) + "\n";
+        reserva += "Fecha Regreso: " + dateFormat.format(fechaVueltaChosser.getDate()) + "\n";
+        reserva += "Cantidad de Adultos: " + adultoTextField.getText() + "\n";
+        reserva += "Cantidad de Niños: " + ninoTextField.getText() + "\n";
+        reserva += "------------------------------------------\n";
+        reserva += "Total: " + totalLabel.getText() + "\n";
+        reserva += "******************************************\n";
+        return reserva;
+    }
+
+    private void reservar() {
+        boolean enviarEmail = enviarEmailCheckBox.isSelected();
+        boolean enviarSMS = enviarSMSCheckBox.isSelected();
+        notifier =  new ConfigurationNotifier(enviarEmail, enviarSMS);
+        notifier.SendNotification(getDatosReserva());
     }
 
 
