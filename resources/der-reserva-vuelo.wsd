@@ -1,6 +1,51 @@
 @startuml "Reserva de vuelos - Juancho"
 title "Reserva de vuelos - Juancho"
+package "Decorator Pattern" <<Rectangle>> {
+    interface "INotifier" as iNotifier {
+        --
+        + void send(String message);
+    }
 
+    class "PDFNotifier" as pdfNotifier{
+        --
+        + void send(String message)
+    }
+    class "BaseNotifier" as baseNotifier{
+         - INotifier wrapppe
+         --
+         + BaseNotifier (INotifier notifier)
+         + void send(String message)
+    }
+    class "MailNotifier" as mailNotifier{
+        --
+        + void send(String message)
+    }
+    class "SMSNotifier" as smsNotifier{
+        --
+        + void send(String message)
+    }
+
+    class "ConfigurationNotifier" as configNotifier{
+        - INotifier _notifier
+        - boolean _enableMail
+        - boolean _enableSMS
+        --
+        + ConfigurationNotifier(boolean enableMail,boolean enableSMS
+        - void configNotifier()
+        + void SendNotification(String message)
+    }
+    
+     iNotifier <- configNotifier
+
+    pdfNotifier .|> iNotifier
+    iNotifier <|.. baseNotifier
+    
+    baseNotifier o-- iNotifier
+
+    baseNotifier <|-- mailNotifier
+    baseNotifier <|-- smsNotifier
+
+}
 package "Strategy Pattern" <<Rectangle>> {
     class "CalculadoraTarifa" as calculator {
         -ITarifaBase _tarifa

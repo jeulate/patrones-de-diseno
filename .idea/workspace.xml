@@ -5,12 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4bac1bf9-0025-42ff-92e6-dcf1daedd7fd" name="Changes" comment="patrones actualizados">
-      <change afterPath="$PROJECT_DIR$/src/ASReservaVuelos/pDecorator/BaseNotifier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ASReservaVuelos/pDecorator/ConfigurationNotifier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ASReservaVuelos/pDecorator/INotifier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ASReservaVuelos/pDecorator/MailNotifier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ASReservaVuelos/pDecorator/PDFNotifier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ASReservaVuelos/pDecorator/SMSNotifier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/der-reserva-vuelo.wsd" beforeDir="false" afterPath="$PROJECT_DIR$/resources/der-reserva-vuelo.wsd" afterDir="false" />
     </list>
